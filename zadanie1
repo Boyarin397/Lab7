@@ -1,0 +1,5 @@
+intersection_ordered = []
+for item in list1:
+    if item in list2 and item not in itersection_ordered:
+    intersection_ordered.append(item)
+print("Пересечение (с порядком):", intersection_ordered)
