@@ -1,0 +1,10 @@
+def median_heaps(arr):
+    if not arr:
+      return None
+    max_heap = []
+    min_heap = []
+    for num in arr:
+      heapq.heappush(max_heap, -num)
+      heapq.heappush(min_heap, -heapq.heappop(max_heap))
+      if len(min_heap) > len(max_heap):
+        heapq.heappush(max_heap, -heapq.heappop(min_heap))
