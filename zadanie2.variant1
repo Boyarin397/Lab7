@@ -1,0 +1,11 @@
+import heapq
+  def median_sort(arr):
+      if not arr:
+        return None
+        sorted_arr = sorted(arr)
+        n = len(sorted_arr)
+        mid = n // 2
+        if n % 2 != 0:
+          return sorted_arr[mid]
+        else:
+          return (sorted_arr[mid - 1] + sorted_arr[mid]) / 2.0
